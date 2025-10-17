@@ -52,7 +52,7 @@ def generate_launch_description():
     # use_sim = LaunchConfiguration('use_sim')
 
     x_pose = LaunchConfiguration('x_pose', default='0.0')
-    y_pose = LaunchConfiguration('y_pose', default='0.0')
+    y_pose = LaunchConfiguration('y_pose', default='0.2')
 
     
     world = os.path.join( 
