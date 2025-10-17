@@ -1,33 +1,48 @@
-# skratch_simulation
+# sKratch
 
-## Create ROS2 workspace
+sKratchBOT, a mobile robot with a custom-made base using Kelo wheels and a Kinova 7-DOF Manipulator, developed for the b-it bots team for the RoboCup @Work League
+
+## Requirements
+* Minimun Ubuntu 22.04 
+* Ros humble ([see installation guide](https://docs.ros.org/en/humble/Installation.html))
+
+## Setup Instructions
+1. Create a ROS 2 Workspace 
 ```
-mkdir -p ~/sKratch_ws/src
-cd ~/sKratch_ws/src
-```
-## Prerequisites
-```
-git clone https://github.com/b-it-bots/skratch_description.git
-git clone -b ros2-develop https://github.com/kelo-robotics/kelo_tulip.git
-```
-Clone this repository
-```
-https://github.com/b-it-bots/skratch_simulation.git
-```
-Source ROS and build workspace
-```
-source /opt/ros/humble/setup.bash
-colcon build
-source install/setup.bash
+mkdir -p ~/skratch_ws/src
+cd ~/skratch_ws/src
 ```
 
-## Running the simulation
-Launch robot in simulation
+2. Clone the Repository
 ```
-ros2 launch skratch_gazebo simulation.launch.py
+git clone git@github.com:AnudeepSajja/sKratch.git .s
 ```
 
-In another terminal run `teleop_twist_keyboard` to control the robot using keyboard
+3. Build the Workspace
+
+Navigate to the workspace root and build:
 ```
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
+cd ~/skratch_ws
+colcon build --symlink-install --packages-select package_name
 ```
+
+Currently available packages:
+
+```
+colcon build --symlink-install --packages-select skratch_description skratch_gazebo
+```
+
+
+4. Run Gazebo Simulation
+
+Source the setup file and launch Gazebo:
+```
+source ~/skratch_ws/install/setup.bash 
+ros2 launch skratch_gazebo gazebo.launch.py
+``` 
+
+once the robot is launched you can use teleop twist keyboard to control the roobt.
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard 
+```
+
