@@ -6,6 +6,11 @@ sKratchBOT, a mobile robot with a custom-made base using Kelo wheels and a Kinov
 * Minimun Ubuntu 22.04 
 * Ros humble ([see installation guide](https://docs.ros.org/en/humble/Installation.html))
 
+## Dependencies
+```bash
+sudo apt install -y ros-humble-gazebo-ros-pkgs gazebo libgazebo-dev python3-colcon-common-extensions ros-humble-xacro ros-humble-joint*
+```
+
 ## Setup Instructions
 ### 1. Create a ROS 2 Workspace 
 ```bash
