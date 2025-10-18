@@ -32,7 +32,7 @@ git clone -b dev_classic --single-branch https://github.com/b-it-bots/skratch_de
 git clone -b dev_classic --single-branch https://github.com/b-it-bots/skratch_simulation.git
 ```
 
-3. Build the Workspace
+### 3. Build the Workspace
 
 Navigate to the workspace root and build:
 ```bash
@@ -47,7 +47,7 @@ colcon build --symlink-install --packages-select skratch_description skratch_gaz
 ```
 
 
-4. Run Gazebo Simulation
+### 4. Run Gazebo Simulation
 
 Source the setup file and launch Gazebo:
 ```bash
