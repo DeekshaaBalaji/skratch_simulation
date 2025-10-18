@@ -24,7 +24,7 @@ git clone -b dev_classic --single-branch https://github.com/b-it-bots/skratch_de
 #### 2.2 Clone the skratch_simulation for gazebo setup
 
 ```bash
-git clone -b dev_classic --single-branch https://github.com/b-it-bots/skratch_simulation.git . 
+git clone -b dev_classic --single-branch https://github.com/b-it-bots/skratch_simulation.git
 ```
 
 3. Build the Workspace
