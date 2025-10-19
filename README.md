@@ -61,3 +61,25 @@ once the robot is launched you can use teleop twist keyboard to control the roob
 ros2 run teleop_twist_keyboard teleop_twist_keyboard 
 ```
 
+## Mapping
+If not already done, install following packages
+
+```bash
+sudo apt-get install ros-humble-slam-toolbox ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-teleop-twist-keyboard
+```
+
+### Creating a Map
+
+Run mapping node, and move the robot around the 
+
+```bash
+ros2 launch skratch_navigation online_async.launch.py
+```
+
+### Saving the Map
+```bash
+cd ~/skratch_ws/src/skratch_simulation/skratch_navigation/maps/
+ros2 run nav2_map_server map_saver_cli -f map_name
+```
+
+
