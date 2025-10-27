@@ -82,4 +82,20 @@ cd ~/skratch_ws/src/skratch_simulation/skratch_navigation/maps/
 ros2 run nav2_map_server map_saver_cli -f map_name
 ```
 
+## Running in Docker
 
+* Build docker image
+  Choose the dockerfile based on your hardware spec, e.g., `dockerfiles/Dockerfile.rocm` (for AMD GPU), `dockerfiles/Dockerfile.nvidia` (for NVIDIA GPU), or `dockerfiles/Dockerfile` (for CPU only).
+  ```
+  docker build -t skratch_sim:latest -f dockerfiles/Dockerfile.rocm dockerfiles
+  ```
+
+* Run simulation in container
+  * **Wayland** display with AMD GPU
+    ```
+    ./sim-docker-amd-wayland.sh
+    ```
+  * For NVIDIA GPU:
+    ```
+    # ToDo
+    ```  
